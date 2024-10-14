@@ -1,0 +1,13 @@
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Generate MCQs</button>
+</form>
+
+
+<!--form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="document">Upload PDF:</label>
+    <input type="file" name="document" id="document" required>
+    <button type="submit">Generate MCQs</button>
+</form> --!>

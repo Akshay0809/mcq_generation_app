@@ -1,0 +1,72 @@
+
+{% comment %}
+<!--h2>Generated MCQs:</!--h2>
+<ul>
+    {% for mcq in mcqs %}
+    <div>
+        <br>
+    <li>{{ mcq.question }}</li>
+   </div>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'download_mcq_pdf' %}">Download MCQs as PDF</a> -->
+
+
+
+<!-- templates/mcq_generated.html -->
+
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated MCQs</title>
+</head>
+<body>
+    <h1>Current MCQs</h1>
+    <ul>
+        {% for mcq in mcqs %}
+            <li>{{ mcq.question }}</li>
+        {% empty %}
+            <li>No current MCQs available.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'download_mcq_pdf' %}">Download MCQs as PDF</a>
+
+    <h1>History of MCQs</h1>
+    <ul>
+        {% for mcq in MCQ.objects.filter(is_current=False) %}
+            <li>{{ mcq.question }} (Created on: {{ mcq.created_at }})</li>
+        {% empty %}
+            <li>No past MCQs available.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'download_mcq_pdf' %}">Download MCQs as PDF</a>
+</body>
+</html> -->
+
+{% endcomment %}
+
+<h2>Current MCQs</h2>
+<ul>
+
+    {% for mcq in current_mcqs %}
+    <br>
+        <li>{{ mcq.question }}</li>
+    {% empty %}
+        <li>No current MCQs available.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'download_mcq_pdf' %}">Download MCQs as PDF</a>
+
+<h2>Past MCQs</h2>
+<ul>
+    {% for mcq in past_mcqs %}
+    <br>
+        <li>{{ mcq.question }} (Created on: {{ mcq.created_at }})</li>
+    {% empty %}
+        <li>No past MCQs available.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'download_mcq_pdf' %}">Download MCQs as PDF</a>
