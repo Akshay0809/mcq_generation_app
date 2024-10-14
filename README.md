@@ -1,4 +1,6 @@
-#Django MCQ Generation from PDF using Groq's LLaMA 3.1
+#**Django MCQ Generation from PDF using Groq's LLaMA 3.1**
+
+
 This Django project is Layouted to Produce Multiple Choice Questions (MCQs) from a PDF file uploaded by the Operator. the cast leverages groq's llama-31-70b speech Check for head propagation and allows the Produced mcqs to work blessed inch amp Informationbase. also Operators can download the Produced MCQs as a PDF file with a watermark.
 
 important Characteristics
